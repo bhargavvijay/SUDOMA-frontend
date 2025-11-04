@@ -11,7 +11,7 @@ export const ViewOocyteDonorDetails = () => {
   useEffect(() => {
     const fetchSampleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/view-oocyte-donor-details/${id}`, {
+        const response = await fetch(`https://sudoma-backend-api.onrender.com/api/view-oocyte-donor-details/${id}`, {
           credentials: "include",
         });
         
@@ -369,7 +369,7 @@ export const ViewOocyteDonorDetails = () => {
                   return (
                     <a
                       key={index}
-                      href={`http://localhost:4000/api/documents/${encodeURIComponent(fileName)}`}
+                      href={`https://sudoma-backend-api.onrender.com/api/documents/${encodeURIComponent(fileName)}`}
                       style={{
                         display: "flex",
                         alignItems: "center",

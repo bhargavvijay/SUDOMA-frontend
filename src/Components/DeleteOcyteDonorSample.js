@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchSamples = async () => {
 //       try {
-//         const response = await fetch("http://localhost:4000/api/view-oocyte-samples");
+//         const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-oocyte-samples");
 
 //         if (!response.ok) {
 //           throw new Error("Failed to fetch Oocyte donors");
@@ -35,7 +35,7 @@
 //       return;
 //     }
 //     try {
-//       const response = await fetch(`http://localhost:4000/api/delete-oocyte-sample/${id}`, {
+//       const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-oocyte-sample/${id}`, {
 //         method: "DELETE",
 //       });
 
@@ -210,7 +210,7 @@ export default function ViewOocyteSamples() {
   useEffect(() => {
     const fetchSamples = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/view-oocyte-samples", {
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-oocyte-samples", {
           credentials: "include",
         }
         );
@@ -238,7 +238,7 @@ export default function ViewOocyteSamples() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/api/delete-oocyte-sample/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-oocyte-sample/${id}`, {
         method: "DELETE",
         credentials: "include",
       });

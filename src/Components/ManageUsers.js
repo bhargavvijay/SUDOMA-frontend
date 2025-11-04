@@ -36,7 +36,7 @@ export default function ManageUsers() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/users',{
+        const response = await fetch('https://sudoma-backend-api.onrender.com/api/users',{
         
           credentials: "include",
         });
@@ -70,7 +70,7 @@ export default function ManageUsers() {
   const handleDelete = async (userId) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
-        const response = await fetch(`http://localhost:4000/api/delete-user/${userId}`, {
+        const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-user/${userId}`, {
           method: 'DELETE',
           credentials: "include",
 
@@ -104,7 +104,7 @@ export default function ManageUsers() {
   const handleSaveUser = async (updatedUser) => {
     console.log("Saving user:");
     try {
-      const response = await fetch(`http://localhost:4000/api/update-user/${updatedUser._id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/update-user/${updatedUser._id}`, {
         method: 'PUT',
         credentials: "include",
         headers: {
@@ -733,7 +733,7 @@ const handleSubmit = async (e) => {
     console.log("Submitting data:", dataToSubmit);
 
     // API Call to update the user
-    const response = await fetch(`http://localhost:4000/api/update-user/${dataToSubmit.id}`, {
+    const response = await fetch(`https://sudoma-backend-api.onrender.com/api/update-user/${dataToSubmit.id}`, {
       method: "PUT",
       credentials: "include",
       headers: {

@@ -115,7 +115,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/logout', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/logout', {
         method: 'POST',
         credentials: 'include', // Ensures cookies are sent with the request
       });

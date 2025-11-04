@@ -447,7 +447,7 @@ export const AddArtBank = () => {
           formData.append("documents", file);
         });
 
-        const response = await fetch("http://localhost:4000/api/add-art-bank", {
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/add-art-bank", {
           method: "POST",
           body: formData,
           credentials: 'include' // Add this line

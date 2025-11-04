@@ -15,7 +15,7 @@ export const ViewSurrogateRequisition = () => {
   useEffect(() => {
     const fetchRequisitions = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/view-surrogacy-requistion",{
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-surrogacy-requistion",{
           credentials: "include",
         });
 
@@ -51,7 +51,7 @@ export const ViewSurrogateRequisition = () => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/api/delete-surrogacy-details/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-surrogacy-details/${id}`, {
         method: "DELETE",
         credentials: "include",
 

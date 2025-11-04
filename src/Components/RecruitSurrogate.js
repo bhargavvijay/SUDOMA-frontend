@@ -90,7 +90,7 @@ const RecruitSurrogate = ({collect}) => {
         formData.append('documents', file);
       });
       
-      const response = await fetch("http://localhost:4000/api/add-surrogate", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/add-surrogate", {
         method: "POST",
         body: formData,
         credentials: "include",

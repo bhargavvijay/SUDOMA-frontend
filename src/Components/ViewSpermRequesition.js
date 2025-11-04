@@ -30,7 +30,7 @@ export const ViewSpermRequisitions = (props) => {
   useEffect(() => {
     const fetchRequisitions = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/view-sperm-requisition", {
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-sperm-requisition", {
           credentials: "include",
         });
 
@@ -80,7 +80,7 @@ export const ViewSpermRequisitions = (props) => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/api/delete-sperm-details/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-sperm-details/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -112,7 +112,7 @@ export const ViewSpermRequisitions = (props) => {
         weightVariance: weightVariance,
       };
 
-      const response = await fetch("http://localhost:4000/api/find-matches-sperm", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/find-matches-sperm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),

@@ -129,7 +129,7 @@ const RecruitOocyteDonor = ({collect}) => {
         formData.append('documents', file);
       });
 
-      const response = await fetch("http://localhost:4000/api/add-oocyte-sample", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/add-oocyte-sample", {
         method: "POST",
         body: formData,
         credentials: "include",

@@ -67,7 +67,7 @@ const AadhaarVerification = ({handleSubmit,setShowAadhaarVerificationPage,formDe
     
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:4000/api/aadhaar/generate-otp', {
+      const response = await axios.post('https://sudoma-backend-api.onrender.com/api/aadhaar/generate-otp', {
         aadhaarNumber: cleanAadhaar,
         purpose: 'ForKYC',
         consent: 'Y'
@@ -116,7 +116,7 @@ const AadhaarVerification = ({handleSubmit,setShowAadhaarVerificationPage,formDe
     
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:4000/api/aadhaar/verify-otp', {
+      const response = await axios.post('https://sudoma-backend-api.onrender.com/api/aadhaar/verify-otp', {
         otp,
         referenceId,
         mobileNumber: mobileNumber || '',
@@ -168,7 +168,7 @@ const AadhaarVerification = ({handleSubmit,setShowAadhaarVerificationPage,formDe
     
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:4000/api/aadhaar/generate-otp', {
+      const response = await axios.post('https://sudoma-backend-api.onrender.com/api/aadhaar/generate-otp', {
         aadhaarNumber: cleanAadhaar,
         purpose: 'ForKYC',
         consent: 'Y'

@@ -67,7 +67,7 @@ const DonorSpecificationsForm = () => {
         artBank: formDetails.artBank
       };
       
-      const response = await fetch('http://localhost:4000/api/add-sperm-requisition', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/add-sperm-requisition', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

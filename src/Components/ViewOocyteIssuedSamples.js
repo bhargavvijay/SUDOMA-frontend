@@ -9,7 +9,7 @@
 //   useEffect(() => {
 //     const fetchIssuedSamples = async () => {
 //       try {
-//         const response = await fetch('http://localhost:4000/api/view-issued-oocyte-samples');
+//         const response = await fetch('https://sudoma-backend-api.onrender.com/api/view-issued-oocyte-samples');
 //         if (!response.ok) {
 //           throw new Error('Failed to fetch issued oocyte donors');
 //         }
@@ -135,7 +135,7 @@ export const ViewOocyteIssuedSamples = () => {
     const fetchSamples = async () => {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/view-issued-oocyte-samples"
+          "https://sudoma-backend-api.onrender.com/api/view-issued-oocyte-samples"
         ,{ 
                    credentials: "include",
         });

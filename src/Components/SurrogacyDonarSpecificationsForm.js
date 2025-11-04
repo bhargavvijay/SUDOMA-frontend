@@ -56,7 +56,7 @@ export const SurrogacyDonarSpecificationsForm = () => {
 
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:4000/api/add-surrogacy-requistion", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/add-surrogacy-requistion", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: "http://localhost:4000/api",
+    baseURL: "https://sudoma-backend-api.onrender.com/api",
     timeout:3000,
 });
 

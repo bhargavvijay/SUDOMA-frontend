@@ -18,7 +18,7 @@ const MatchingSpermSamples = ({ setShowMatchesPage, data, reqId, handleFindMatch
     setLoading(true);
     try {
       const response = await fetch(
-        "http://localhost:4000/api/issue-sperm-sample",
+        "https://sudoma-backend-api.onrender.com/api/issue-sperm-sample",
         {
           method: "POST",
           headers: {

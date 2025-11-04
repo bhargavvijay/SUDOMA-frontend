@@ -17,7 +17,7 @@ export const ViewReceivedOocyteDonors = () => {
     const fetchSamples = async () => {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/view-received-oocyte-samples"
+          "https://sudoma-backend-api.onrender.com/api/view-received-oocyte-samples"
         ,{
           credentials: "include",
         });

@@ -192,7 +192,7 @@ export default function IssueSurrogateSample() {
   useEffect(() => {
     const fetchSurrogateRequisitions = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/get-surrogate-requisitions',{
+        const response = await fetch('https://sudoma-backend-api.onrender.com/api/get-surrogate-requisitions',{
           credentials: "include",
         });
         if (!response.ok) {
@@ -298,7 +298,7 @@ export default function IssueSurrogateSample() {
   const handleFindSamples = async (req) => {
     setCurrentReq(req);
     try {
-      const response = await fetch('http://localhost:4000/api/find-matches-surrogate', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/find-matches-surrogate', {
         method: 'POST',
         credentials: "include",
         headers: { 'Content-Type': 'application/json' },
@@ -350,7 +350,7 @@ export default function IssueSurrogateSample() {
   const handleIssueSample = async (sample) => {
     try {
       console.log("Issuing surrogate sample:", sample);
-      const response = await fetch('http://localhost:4000/api/issue-surrogate-sample', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/issue-surrogate-sample', {
         method: 'POST',
         credentials: "include",
         headers: { 'Content-Type': 'application/json' },

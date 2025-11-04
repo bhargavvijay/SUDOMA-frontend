@@ -17,7 +17,7 @@ export default function DeleteSpermSamples() {
   useEffect(() => {
     const fetchSamples = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/view-sperm-samples",{
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-sperm-samples",{
           credentials: "include",
         });
         if (!response.ok) {
@@ -44,7 +44,7 @@ export default function DeleteSpermSamples() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/api/delete-sperm-sample/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-sperm-sample/${id}`, {
         method: "DELETE",
         credentials: "include",
       });

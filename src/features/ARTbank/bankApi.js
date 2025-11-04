@@ -7,7 +7,7 @@ export function addARTBank(artBankData) {
         formData.append(key, artBankData[key]);
       }
 
-      const response = await fetch('http://localhost:4000/api/add-art-bank', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/add-art-bank', {
         method: 'POST',
         body: formData,
         credentials: "include",
@@ -31,7 +31,7 @@ export function addARTBank(artBankData) {
 export function fetchAllARTBanks() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch('http://localhost:4000/api/fetch-art-banks', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/fetch-art-banks', {
         method: 'GET',
         credentials: 'include', // Include credentials for CORS requests
       });
@@ -53,7 +53,7 @@ export function fetchAllARTBanks() {
 export function deleteARTBankById(id) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/remove-art-bank/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/remove-art-bank/${id}`, {
         method: 'DELETE',
         credentials: "include",
       });
@@ -83,7 +83,7 @@ export function deleteARTBankById(id) {
 //       console.log(formData)
 
 
-//       const response = await fetch(`http://localhost:4000/api/edit-bank/${id}`, {
+//       const response = await fetch(`https://sudoma-backend-api.onrender.com/api/edit-bank/${id}`, {
 //         method: 'PATCH',
 //         body: formData, // Send as FormData for partial updates
 //       });
@@ -106,7 +106,7 @@ export function editARTBankById(id, updatedData) {
     try {
       console.log(`Making request to edit ART bank with ID: ${id}`);
       
-      const response = await fetch(`http://localhost:4000/api/edit-bank/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/edit-bank/${id}`, {
         method: 'PATCH',
         body: updatedData,
         credentials: "include",

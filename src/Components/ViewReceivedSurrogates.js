@@ -14,7 +14,7 @@ export const ViewReceivedSurrogates = () => {
     const fetchSamples = async () => {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/view-recieved-surrogate"
+          "https://sudoma-backend-api.onrender.com/api/view-recieved-surrogate"
         ,{          
           credentials: "include",
         });

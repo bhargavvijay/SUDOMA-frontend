@@ -11,7 +11,7 @@ export const ViewSurrogateDetail = () => {
     const fetchSampleDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:4000/api/view-surrogate-details/${id}`, {
+        const response = await fetch(`https://sudoma-backend-api.onrender.com/api/view-surrogate-details/${id}`, {
           credentials: "include",
         });
         if (!response.ok) throw new Error("Failed to fetch surrogate details");
@@ -285,7 +285,7 @@ export const ViewSurrogateDetail = () => {
     <label style={labelStyle}>Document {index + 1}:</label>
     <span style={valueStyle}>
       <a
-        href={`http://localhost:4000/api/documents/${encodeURIComponent(doc.filename)}`}
+        href={`https://sudoma-backend-api.onrender.com/api/documents/${encodeURIComponent(doc.filename)}`}
         style={{
           display: "inline-block",
           padding: "8px 15px",

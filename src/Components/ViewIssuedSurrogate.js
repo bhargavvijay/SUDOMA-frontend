@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchIssuedSamples = async () => {
 //       try {
-//         const response = await fetch('http://localhost:4000/api/view-issued-surrogate');
+//         const response = await fetch('https://sudoma-backend-api.onrender.com/api/view-issued-surrogate');
 //         if (!response.ok) {
 //           throw new Error('Failed to fetch issued surrogate');
 //         }
@@ -121,7 +121,7 @@ export const ViewIssuedSurrogate = () => {
     const fetchSamples = async () => {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/view-issued-surrogate"
+          "https://sudoma-backend-api.onrender.com/api/view-issued-surrogate"
         ,{
           credentials: "include",
         });

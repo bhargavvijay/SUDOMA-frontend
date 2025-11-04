@@ -88,7 +88,7 @@ const ReceiveSpermSamples = () => {
         formData.append("documents", file);
       });
 
-      const response = await fetch("http://localhost:4000/api/receive-sperm-sample", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/receive-sperm-sample", {
         method: "POST",
         credentials: "include",
         body: formData, // Don't set Content-Type header, browser will set it with boundary for multipart/form-data

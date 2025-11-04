@@ -24,7 +24,7 @@ export default function IssueDonorSample() {
   useEffect(() => {
     const fetchOocyteRequisitions = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/view-oocyte-requisitions', {
+        const response = await fetch('https://sudoma-backend-api.onrender.com/api/view-oocyte-requisitions', {
           credentials: "include",
         });
         
@@ -51,7 +51,7 @@ export default function IssueDonorSample() {
     setCurrentReq(req);
     console.log("CALLED")
     try {
-      const response = await fetch('http://localhost:4000/api/find-matches-oocyte', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/find-matches-oocyte', {
         method: 'POST',
         credentials: "include",
         headers: { 'Content-Type': 'application/json' },
@@ -95,7 +95,7 @@ export default function IssueDonorSample() {
     setIssuedSampleId(sample._id);
     
     try {
-      const response = await fetch("http://localhost:4000/api/issue-oocyte-sample", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/issue-oocyte-sample", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

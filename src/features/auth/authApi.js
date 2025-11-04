@@ -1,6 +1,6 @@
 export function createUser(userData) {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:4000/api/register', {
+    const response = await fetch('https://sudoma-backend-api.onrender.com/api/register', {
       method: 'POST',
       body: JSON.stringify(userData),
       credentials: "include",
@@ -13,7 +13,7 @@ export function createUser(userData) {
 
 export function fetchUser(userId) {
   return new Promise(async (resolve) => {
-    const response = await fetch(`http://localhost:4000/api/user/${userId}`, {
+    const response = await fetch(`https://sudoma-backend-api.onrender.com/api/user/${userId}`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
       credentials: "include",
@@ -26,7 +26,7 @@ export function fetchUser(userId) {
 export function loginUser(userData) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch('http://localhost:4000/api/login', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/login', {
         method: 'POST',
         body: JSON.stringify(userData),
         headers: { 'Content-Type': 'application/json' },
@@ -50,7 +50,7 @@ export function loginUser(userData) {
 export function checkAuth() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch('http://localhost:4000/api/auth/check', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/auth/check', {
         method: 'GET',
         credentials: 'include', // Ensure cookies are sent with the request
       });
@@ -73,7 +73,7 @@ export function checkAuth() {
 export function resetPasswordRequest(email) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch('http://localhost:4000/api/forgot-password', {
+      const response = await fetch('https://sudoma-backend-api.onrender.com/api/forgot-password', {
         method: 'POST',
         body: JSON.stringify({ email }),
         headers: { 'Content-Type': 'application/json' },
@@ -97,7 +97,7 @@ export function resetPasswordRequest(email) {
 export function resetPassword(data) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/reset-password/${data.id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/reset-password/${data.id}`, {
         method: 'POST',
         body: JSON.stringify({ newPassword: data }),
         headers: { 'Content-Type': 'application/json' },

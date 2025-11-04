@@ -86,7 +86,7 @@ const AddSpermSample = ({collect}) => {
   const handleRemoveUploadedDoc = async (docPath) => {
     try {
       // Assuming there's an API endpoint to delete a document
-      const response = await fetch(`http://localhost:4000/api/delete-document`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-document`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ path: docPath }),
@@ -172,7 +172,7 @@ const handleSubmit = async (e) => {
         documentsCount: documents.length
       });
 
-      const response = await fetch("http://localhost:4000/api/add-sperm-sample", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/add-sperm-sample", {
         method: "POST",
         credentials: "include",
         body: formData, // Don't set Content-Type header with FormData
@@ -745,7 +745,7 @@ const handleSubmit = async (e) => {
                     }}
                   >
                     <a 
-                      href={`http://localhost:4000/api/documents/${encodeURIComponent(doc.split('\\').pop())}`} 
+                      href={`https://sudoma-backend-api.onrender.com/api/documents/${encodeURIComponent(doc.split('\\').pop())}`} 
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{

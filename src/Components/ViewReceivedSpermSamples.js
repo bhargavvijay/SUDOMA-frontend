@@ -17,7 +17,7 @@ export const ViewReceivedSpermSamples = () => {
     const fetchSamples = async () => {
       try {
         const response = await fetch(
-          "http://localhost:4000/api/view-received-sperm-samples"
+          "https://sudoma-backend-api.onrender.com/api/view-received-sperm-samples"
         ,{
           credentials: "include",
         });

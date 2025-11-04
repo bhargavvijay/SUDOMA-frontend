@@ -25,7 +25,7 @@ export const ViewOocyteRequisitions = (props) => {
   useEffect(() => {
     const fetchRequisitions = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/view-oocyte-requisitions",{
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-oocyte-requisitions",{
           credentials: "include",
 
         });
@@ -62,7 +62,7 @@ export const ViewOocyteRequisitions = (props) => {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/api/delete-oocyte-requisition/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-oocyte-requisition/${id}`, {
         method: "DELETE",
         credentials: "include",
 
@@ -96,7 +96,7 @@ export const ViewOocyteRequisitions = (props) => {
         artBank: req.artBank,
       };
 
-      const response = await fetch("http://localhost:4000/api/find-matches-oocyte", {
+      const response = await fetch("https://sudoma-backend-api.onrender.com/api/find-matches-oocyte", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),          credentials: "include",

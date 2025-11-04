@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchSamples = async () => {
 //       try {
-//         const response = await fetch('http://localhost:4000/api/view-surrogate-samples');
+//         const response = await fetch('https://sudoma-backend-api.onrender.com/api/view-surrogate-samples');
 
 //         if (!response.ok) {
 //           throw new Error('Failed to fetch surrogates');
@@ -35,7 +35,7 @@
 //       return;
 //     }
 //     try {
-//       const response = await fetch(`http://localhost:4000/api/delete-recieved-surrogte/${id}`, {
+//       const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-recieved-surrogte/${id}`, {
 //         method: 'DELETE',
 //       });
 
@@ -176,7 +176,7 @@ export default function ViewSurrogateSamples() {
   useEffect(() => {
     const fetchSamples = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/view-surrogate-samples",{
+        const response = await fetch("https://sudoma-backend-api.onrender.com/api/view-surrogate-samples",{
           credentials: "include",
 
         });
@@ -204,7 +204,7 @@ export default function ViewSurrogateSamples() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:4000/api/delete-surrogate/${id}`, {
+      const response = await fetch(`https://sudoma-backend-api.onrender.com/api/delete-surrogate/${id}`, {
         method: "DELETE",
         credentials: "include",
       });

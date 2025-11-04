@@ -11,7 +11,7 @@ export const ViewSampleDetails = () => {
   useEffect(() => {
     const fetchSampleDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/view-sample-details/${id}`, {
+        const response = await fetch(`https://sudoma-backend-api.onrender.com/api/view-sample-details/${id}`, {
           credentials: "include",
         });
         
@@ -260,7 +260,7 @@ export const ViewSampleDetails = () => {
                 {documents.map((doc, index) => (
                   <div key={index} style={{ margin: "8px 0" }}>
                     <a
-                      href={`http://localhost:4000/api/documents/${encodeURIComponent(doc.split('\\').pop())}`}
+                      href={`https://sudoma-backend-api.onrender.com/api/documents/${encodeURIComponent(doc.split('\\').pop())}`}
                       style={styles.fileLink}
                       target="_blank"
                       rel="noopener noreferrer"

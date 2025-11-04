@@ -152,7 +152,7 @@ export const ViewArtBank = ({ bankDetails, setViewArtBank }) => {
 
   // Function to handle document viewing
   const handleDocumentView = (fileName) => {
-    const documentUrl = `http://localhost:4000/api/documents/${encodeURIComponent(fileName)}`;
+    const documentUrl = `https://sudoma-backend-api.onrender.com/api/documents/${encodeURIComponent(fileName)}`;
     setViewingDocument({ url: documentUrl, name: fileName });
   };
 

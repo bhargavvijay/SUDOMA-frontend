@@ -504,7 +504,7 @@ const EditBank = ({ bankDetails, setEditArtBank }) => {
                     <div style={styles.documentName}>
                       <File size={18} style={styles.fileIcon} />
 <a 
-  href={`http://localhost:4000/api/documents/${encodeURIComponent(doc.split('\\').pop())}`} 
+  href={`https://sudoma-backend-api.onrender.com/api/documents/${encodeURIComponent(doc.split('\\').pop())}`} 
   style={styles.fileLink}
   target="_blank"
   rel="noopener noreferrer"
