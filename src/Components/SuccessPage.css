@@ -1,0 +1,54 @@
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eaffea;
+    font-family: Arial, sans-serif;
+  }
+  
+  .success-card {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .success-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .success-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .success-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .success-message {
+    font-size: 1.1rem;
+    color: #e0f2e0;
+    margin-bottom: 20px;
+  }
+  
+  .success-redirect {
+    font-size: 0.9rem;
+    color: #c8e6c9;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
